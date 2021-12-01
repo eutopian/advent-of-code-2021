@@ -9,15 +9,11 @@ const countIncreasing = (data) => {
 };
 
 const countIncreasingWindows = (data) => {
-  return countIncreasing(getWindows(data));
-};
-
-const getWindows = (data) => {
-  let windows = [];
-  for (let i = 0; i < data.length - 3; i++) {
-    windows.push(getSum(data.slice(i, i + 3)));
+  let increase = 0;
+  for (let i = 3; i < data.length; i++) {
+    if (data[i] > data[i - 3]) increase++;
   }
-  return windows;
+  return increase;
 };
 
 console.log(countIncreasing(getNumData("./input.txt"))); // 1star
