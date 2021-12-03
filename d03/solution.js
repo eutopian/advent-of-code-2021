@@ -1,26 +1,25 @@
 const { getArrData } = require("../helper.js");
 
 const partOne = (list) => {
-  let most = "";
-  let least = "";
+  let mostBits = "";
 
   for (let i = 0; i < list[0].length; i++) {
     let ones = 0;
-    for (let j = 0; j < list.length && ones <= list.length / 2; j++) {
+    for (let j = 0; j < list.length; j++) {
       if (list[j][i] === "1") {
         ones++;
       }
     }
     if (ones >= list.length / 2) {
-      most += "1";
-      least += "0";
+      mostBits += "1";
     } else {
-      most += "0";
-      least += "1";
+      mostBits += "0";
     }
   }
 
-  return parseInt(least, 2) * parseInt(most, 2);
+  most = parseInt(mostBits, 2);
+  least = most ^ (Math.pow(2, mostBits.length) - 1);
+  return most * least;
 };
 
 console.log(partOne(getArrData("./input.txt")));
