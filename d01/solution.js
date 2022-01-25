@@ -16,5 +16,5 @@ const countIncreasingWindows = (data) => {
   return increase;
 };
 
-console.log(countIncreasing(getNumData("./input.txt"))); // 1star
-console.log(countIncreasingWindows(getNumData("./input.txt"))); // 2star
+console.log(countIncreasing(getNumData("./input.txt")));
+console.log(countIncreasingWindows(getNumData("./input.txt")));
