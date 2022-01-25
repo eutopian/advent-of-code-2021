@@ -4,7 +4,7 @@ module.exports = {
   getData: (input) => {
     return fs.readFileSync(input, "utf8").split("\n");
   },
-  getNumData: (input) => {
+  getDataInt: (input) => {
     return fs.readFileSync(input, "utf8").split("\n").map(Number);
   },
   getArrData: (input) => {

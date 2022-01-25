@@ -1,4 +1,4 @@
-const { getNumData, getSum } = require("../helper.js");
+const { getDataInt, getSum } = require("../helper.js");
 
 const countIncreasing = (data) => {
   let increase = 0;
@@ -16,5 +16,5 @@ const countIncreasingWindows = (data) => {
   return increase;
 };
 
-console.log(countIncreasing(getNumData("./input.txt")));
-console.log(countIncreasingWindows(getNumData("./input.txt")));
+console.log(countIncreasing(getDataInt("./input.txt")));
+console.log(countIncreasingWindows(getDataInt("./input.txt")));
